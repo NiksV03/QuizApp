@@ -12,7 +12,8 @@ def index():
 @app.route('/test',methods = ['POST', 'GET'])
 def test():
   parametri = ["IQ","Augums","Kājas izmērs"]
-  return render_template("test.html", parametri=parametri)
+  images = ["https://upload.wikimedia.org/wikipedia/lv/thumb/b/b5/Olga_Rajecka.JPG/1200px-Olga_Rajecka.JPG","https://upload.wikimedia.org/wikipedia/lv/thumb/b/b5/Olga_Rajecka.JPG/1200px-Olga_Rajecka.JPG","https://upload.wikimedia.org/wikipedia/lv/thumb/b/b5/Olga_Rajecka.JPG/1200px-Olga_Rajecka.JPG"]
+  return render_template("test.html", parametri=parametri,images=images)
 
 @app.route('/about')
 def about():
