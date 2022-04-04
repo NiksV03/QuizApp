@@ -4,7 +4,21 @@ from flask import render_template
 
 app = Flask(__name__)
 
-#Pirmā lapa, kas tiks ielādēta
+def loadAllPictures():
+  filepath = 'picDE.txt'
+  pictures=[]
+  with open(filepath) as fp:
+    line = fp.readline()
+    cnt=1
+    while line:
+      if line!='':
+        fullPicInfo = line.strip().split(';')
+        pictures.append(fullPicInfo[1])
+      line = fp.readline()
+      cnt += 1 
+  fp.close()
+  return pictures
+
 @app.route('/',methods = ['POST', 'GET'])
 def index():
   return render_template("index.html")
@@ -12,7 +26,7 @@ def index():
 @app.route('/test',methods = ['POST', 'GET'])
 def test():
   parametri = ["IQ","Augums","Kājas izmērs"]
-  images = ["https://upload.wikimedia.org/wikipedia/lv/thumb/b/b5/Olga_Rajecka.JPG/1200px-Olga_Rajecka.JPG","https://upload.wikimedia.org/wikipedia/lv/thumb/b/b5/Olga_Rajecka.JPG/1200px-Olga_Rajecka.JPG","https://upload.wikimedia.org/wikipedia/lv/thumb/b/b5/Olga_Rajecka.JPG/1200px-Olga_Rajecka.JPG"]
+  images = loadAllPictures()
   return render_template("test.html", parametri=parametri,images=images)
 
 @app.route('/about')
