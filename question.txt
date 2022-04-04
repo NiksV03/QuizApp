@@ -1,6 +1,6 @@
-Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
-Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
-Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
+: Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
+: Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
+: Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
 Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
 Jautajums: P-pareiza; N-nepareiza: N1-nepareiza2
 20 jautajumi
